@@ -1,0 +1,334 @@
+---
+title: "Analisis Pengaruh Angka Melek Huruf Penduduk umur 15-24 tahun terhadap Kemiskinan Indonesia"
+subtitle: "Metode Penelitian Politeknik APP Jakarta"
+author: "Afifah Nuryani"
+date: 2023-01-20
+number-sections: true
+format:
+  html: default
+  docx: default
+editor: visual
+---
+
+![logo Politeknik APP Jakarta](politeknikapp.jpeg)
+
+## Pendahuluan
+
+### Latar belakang
+
+Kemiskinan adalah suatu kondisi ketidakmampuan secara ekonomi untuk memenuhi standar hidup rata-rata masyarakat di suatu daerah. Kondisi ketidakmampuan ini ditandai dengan rendahnya kemampuan pendapatan untuk memenuhi kebutuhan pokok baik berupa pangan, sandang, maupun papan. Kemampuan pendapatan yang rendah ini juga akan berdampak berkurangnya kemampuan untuk memenuhi standar hidup rata-rata seperti standar kesehatan masyarakat dan standar pendidikan.
+
+Kondisi masyarakat yang disebut miskin dapat diketahui berdasarkan kemampuan pendapatan dalam memenuhi standar hidup (Nugroho, 1995). Pada prinsipnya, standar hidup di suatu masyarakat tidak sekedar tercukupinya kebutuhan akan pangan, akan tetapi juga tercukupinya kebutuhan akan kesehatan maupun pendidikan. Tempat tinggal ataupun pemukiman yang layak merupakan salah satu dari standar hidup atau standar kesejahteraan masyarakat di suatu daerah. Berdasarkan kondisi ini, suatu masyarakat disebut miskin apabila memiliki pendapatan jauh lebih rendah dari rata-rata pendapatan sehingga tidak banyak memiliki kesempatan untuk mensejahterakan dirinya (Suryawati, 2004).
+
+Usaha pemerintah dalam pengentasan masalah kemiskinan sangatlah serius. Kebijakan-kebijakan yang telah pemerintah lakukan belum menampakkan hasil yang optimal. Oleh karena itu diperlukan suatu strategi untuk mengentasi kemiskinan di Indonesia sehingga dapat menyelesaikan masalah ini secara tuntas. Salah satu hal yang berpengaruh terhadap kemiskinan indonesia adalah Pendidikan.
+
+Pendidikan merupakan salah satu unsur dalam ilmu pengetahuan, keterampilan sikap dan perilaku umumnya dapat di lingkungan sekolah atau pendidikan formal. Tetapi tidak hanya pendidikan formal, melalui pendidikan, individu akan memiliki kemampuan untuk mengembangkan diri guna mancapai penghidupan yang lebih baik, dalam melihat tingkat pendidikan formal maupun non formal dapat dilihat dari salah satunya angka melek huruf.
+
+Angka melek huruf juga dapat menjadi indikator melihat perkembangan pendidikan penduduk. Semakin tinggi angka melek huruf atau kecakapan baca tulis, maka semakin tinggi pula mutu dan kualitas SDM. Penduduk yang bisa baca tulis diasumsikan memiliki kemampuan dan keterampilan karena dapat menyerap informasi baik itu lisan maupun tulisan (BPS, 2011:88).
+
+Tingkat kemiskinan yang tinggi dan pembangunan manusia yang masih rendah. Berdasarkan atas dasar latar belakang diatas penulis tertarik untuk membahasnya dengan judul:
+
+**"Analisis Pengaruh Angka Melek Huruf Penduduk umur 15-24 tahun terhadap Kemiskinan Indonesia"**
+
+### Ruang lingkup
+
+Ruang lingkup dan objek penelitian ini hanya fokus terhadap Angka Melek Huruf terhadap Kemiskinan. Peneliti hanya akan meniliti Angka Melek Huruf penduduk Indonesia 15-24 tahun berdasarkan provinsi yang ada di Indonesia. Penelitian lain tentang angka kemiskinan yang ada di Indonesia. Data-data yang dikumpulkan berada di periode 2017-2021 dan data ini berasal dari Badan Pusat Statistika.
+
+### Rumusan masalah
+
+Perumusan masalah dari penelitian ini adalah sebagai berikut:
+
+1\) Apakah Angka Melek Huruf penduduk 15-24 tahun berpengaruh terhadap Kemiskinan Indonesia?
+
+2\) Apakah berpengaruh besar Angka Mata Melek Huruf 15-24 tahun terhadap Kemiskinan Indonesia?
+
+3\) Bagaimana tingkat Angka Melek Huruf 15-24 tahun dan Kemiskinan Indonesia disetiap Provinsi?
+
+### Tujuan dan manfaat penelitian
+
+Sesuai dengan rumusan masalah yang dipaparkan diatas, tujuan penelitian ini adalah untuk mengetahui seberapa besar pengaruh Angka Melek Huruf penduduk 15-24 tahun terhadap Kemiskinan Indonesia sebanyak 37 provinsi yang ada di Indonesia dalam Periode 2017-2021.
+
+Setelah penulis melakukan penelitian dan didukung oleh data-data yang akurat sehingga kebenaran penelitiannya dapat diterima, maka harapan penulis hasil penelitian ini dapat menjadi pengembangan teoritis bagi peneliti selanjutnya. Penulis berharap hasil penelitian ini dapat bermanfaat secara teoritis dan praktis, diantaranya sebagai berikut:
+
+**Manfaat Teoritis**
+
+Hasil penelitian diharapkan dapat menjadi rujukan untuk pengembangan ilmu mengenai Angka Melek Huruf penduduk Indonesia terhadap Kemiskinan Indonesia.
+
+**Manfaat Praktis**
+
+Bagi pembaca, penelitian ini diharapkan dapat membantu dalam proses penelitian khususnya dengan ruang lingkup penelitian ini.
+
+### Package
+
+package yang digunakan dalam penelitian ini anara lain:
+
+```{r}
+
+#| warning: false
+
+#| echo: true
+
+setwd('D:/Metopel/latihan')
+library(tidyverse)
+library(readxl)
+dat<-read_excel('UAS METOPEL.xlsx')
+
+```
+
+## Studi pustaka
+
+Menurut Prathama dan Mandala (1999:370) kemiskinan adalah kondisi dimana seseorang atau keluarga tidak mampu memenuhi kebutuhan dasar seperti makanan, pakaian, perumahan, pendidikan, dan kesehatan. Kemiskinan dapat disebabkan oleh kelangkaan alat pemenuh kebutuhan dasar, ataupun sulitnya akses terhadap pendidikan dan pekerjaan
+
+Angka melek huruf dapat menjadi indikator melihat perkembangan pendidikan penduduk. Semakin tinggi angka melek huruf atau kecakapan baca tulis, maka semakin tinggi pula mutu dan kualitas SDM. Penduduk yang bisa baca tulis diasumsikan memiliki kemampuan dan keterampilan karena dapat menyerap informasi baik itu lisan maupun tulisan (BPS, 2011:88).
+
+## Metode penelitian
+
+### Data
+
+Data penelitian ini berasal dari Badan Pusat Statistika. Data yang diteliti yaitu, Angka Melek Huruf dan Kemiskinan pada 34 Provinsi.
+
+| PROV                 | THN  | AMH   | MISKIN |
+|----------------------|------|-------|--------|
+| ACEH                 | 2017 | 99,96 | 32,81  |
+| SUMATERA UTARA       | 2017 | 99,8  | 19,5   |
+| SUMATERA BARAT       | 2017 | 99,86 | 13,62  |
+| RIAU                 | 2017 | 99,91 | 15,19  |
+| JAMBI                | 2017 | 99,88 | 16,09  |
+| SUMATERA SELATAN     | 2017 | 99,85 | 26,29  |
+| BENGKULU             | 2017 | 99,94 | 32,04  |
+| LAMPUNG              | 2017 | 99,83 | 26,73  |
+| KEP, BANGKA BELITUNG | 2017 | 99,8  | 10,5   |
+| KEP, RIAU            | 2017 | 99,91 | 12,19  |
+| DKI JAKARTA          | 2017 | 99,96 | 7,55   |
+| JAWA BARAT           | 2017 | 99,96 | 16,54  |
+| JAWA TENGAH          | 2017 | 99,87 | 25,24  |
+| DI YOGYAKARTA        | 2017 | 99,94 | 25,38  |
+| JAWA TIMUR           | 2017 | 99,82 | 22,97  |
+| BANTEN               | 2017 | 99,97 | 11,04  |
+| BALI                 | 2017 | 99,83 | 8,39   |
+| NUSA TENGGARA BARAT  | 2017 | 99,78 | 31,12  |
+| NUSA TENGGARA TIMUR  | 2017 | 98,49 | 43,23  |
+| KALIMANTAN BARAT     | 2017 | 99,68 | 15,74  |
+| KALIMANTAN TENGAH    | 2017 | 99,89 | 10,63  |
+| KALIMANTAN SELATAN   | 2017 | 99,92 | 9,43   |
+| KALIMANTAN TIMUR     | 2017 | 99,92 | 12,27  |
+| KALIMANTAN UTARA     | 2017 | 99,42 | 14,18  |
+| SULAWESI UTARA       | 2017 | 99,87 | 16     |
+| SULAWESI TENGAH      | 2017 | 99,54 | 28,36  |
+| SULAWESI SELATAN     | 2017 | 99,34 | 18,86  |
+| SULAWESI TENGGARA    | 2017 | 99,72 | 24,78  |
+| GORONTALO            | 2017 | 99,73 | 34,79  |
+| SULAWESI BARAT       | 2017 | 99,26 | 22,48  |
+| MALUKU               | 2017 | 99,6  | 36,74  |
+| MALUKU UTARA         | 2017 | 99,71 | 12,79  |
+| PAPUA BARAT          | 2017 | 99,37 | 48,22  |
+| PAPUA                | 2017 | 87,51 | 55,38  |
+| ACEH                 | 2018 | 99,92 | 31,65  |
+| SUMATERA UTARA       | 2018 | 99,84 | 18,16  |
+| SUMATERA BARAT       | 2018 | 99,79 | 13,2   |
+| RIAU                 | 2018 | 99,88 | 14,6   |
+| JAMBI                | 2018 | 99,95 | 15,77  |
+| SUMATERA SELATAN     | 2018 | 99,9  | 25,62  |
+| BENGKULU             | 2018 | 99,9  | 30,84  |
+| LAMPUNG              | 2018 | 99,85 | 26,15  |
+| KEP, BANGKA BELITUNG | 2018 | 99,89 | 10,02  |
+| KEP, RIAU            | 2018 | 99,96 | 12,03  |
+| DKI JAKARTA          | 2018 | 99,97 | 7,12   |
+| JAWA BARAT           | 2018 | 99,99 | 14,7   |
+| JAWA TENGAH          | 2018 | 99,88 | 22,51  |
+| DI YOGYAKARTA        | 2018 | 100   | 23,94  |
+| JAWA TIMUR           | 2018 | 99,88 | 21,83  |
+| BANTEN               | 2018 | 99,98 | 10,49  |
+| BALI                 | 2018 | 99,92 | 7,92   |
+| NUSA TENGGARA BARAT  | 2018 | 99,75 | 29,38  |
+| NUSA TENGGARA TIMUR  | 2018 | 98,51 | 42,38  |
+| KALIMANTAN BARAT     | 2018 | 99,79 | 15,14  |
+| KALIMANTAN TENGAH    | 2018 | 99,85 | 10,27  |
+| KALIMANTAN SELATAN   | 2018 | 99,91 | 9,19   |
+| KALIMANTAN TIMUR     | 2018 | 100   | 12,09  |
+| KALIMANTAN UTARA     | 2018 | 99,34 | 13,95  |
+| SULAWESI UTARA       | 2018 | 99,95 | 15,39  |
+| SULAWESI TENGAH      | 2018 | 99,68 | 27,7   |
+| SULAWESI SELATAN     | 2018 | 99,48 | 17,93  |
+| SULAWESI TENGGARA    | 2018 | 99,75 | 22,95  |
+| GORONTALO            | 2018 | 99,84 | 32,64  |
+| SULAWESI BARAT       | 2018 | 99,41 | 22,47  |
+| MALUKU               | 2018 | 99,68 | 35,97  |
+| MALUKU UTARA         | 2018 | 99,9  | 13,26  |
+| PAPUA BARAT          | 2018 | 99,47 | 45,67  |
+| PAPUA                | 2018 | 88,44 | 55,17  |
+| ACEH                 | 2019 | 99,98 | 30,33  |
+| SUMATERA UTARA       | 2019 | 99,88 | 17,46  |
+| SUMATERA BARAT       | 2019 | 99,89 | 12,71  |
+| RIAU                 | 2019 | 99,89 | 13,98  |
+| JAMBI                | 2019 | 99,96 | 15,11  |
+| SUMATERA SELATAN     | 2019 | 99,92 | 25,27  |
+| BENGKULU             | 2019 | 99,91 | 30,14  |
+| LAMPUNG              | 2019 | 99,91 | 24,92  |
+| KEP, BANGKA BELITUNG | 2019 | 99,86 | 9,12   |
+| KEP, RIAU            | 2019 | 99,95 | 11,7   |
+| DKI JAKARTA          | 2019 | 99,96 | 6,89   |
+| JAWA BARAT           | 2019 | 99,98 | 13,73  |
+| JAWA TENGAH          | 2019 | 99,92 | 21,38  |
+| DI YOGYAKARTA        | 2019 | 100   | 23,14  |
+| JAWA TIMUR           | 2019 | 99,91 | 20,57  |
+| BANTEN               | 2019 | 99,97 | 10,03  |
+| BALI                 | 2019 | 99,93 | 7,4    |
+| NUSA TENGGARA BARAT  | 2019 | 99,92 | 28,44  |
+| NUSA TENGGARA TIMUR  | 2019 | 98,8  | 41,71  |
+| KALIMANTAN BARAT     | 2019 | 99,84 | 14,77  |
+| KALIMANTAN TENGAH    | 2019 | 99,84 | 9,79   |
+| KALIMANTAN SELATAN   | 2019 | 99,87 | 9,02   |
+| KALIMANTAN TIMUR     | 2019 | 100   | 11,85  |
+| KALIMANTAN UTARA     | 2019 | 99,68 | 13,12  |
+| SULAWESI UTARA       | 2019 | 99,95 | 15,17  |
+| SULAWESI TENGAH      | 2019 | 99,81 | 26,66  |
+| SULAWESI SELATAN     | 2019 | 99,68 | 17,25  |
+| SULAWESI TENGGARA    | 2019 | 99,92 | 22,28  |
+| GORONTALO            | 2019 | 99,86 | 30,83  |
+| SULAWESI BARAT       | 2019 | 99,49 | 21,97  |
+| MALUKU               | 2019 | 99,9  | 35,34  |
+| MALUKU UTARA         | 2019 | 99,94 | 13,68  |
+| PAPUA BARAT          | 2019 | 99,49 | 43,68  |
+| PAPUA                | 2019 | 90,39 | 54,08  |
+| ACEH                 | 2020 | 98,25 | 30,42  |
+| SUMATERA UTARA       | 2020 | 99,16 | 17,89  |
+| SUMATERA BARAT       | 2020 | 99,17 | 12,84  |
+| RIAU                 | 2020 | 99,23 | 13,86  |
+| JAMBI                | 2020 | 98,19 | 15,55  |
+| SUMATERA SELATAN     | 2020 | 98,75 | 25,64  |
+| BENGKULU             | 2020 | 98,01 | 30,33  |
+| LAMPUNG              | 2020 | 97,24 | 25,1   |
+| KEP, BANGKA BELITUNG | 2020 | 98,08 | 9,42   |
+| KEP, RIAU            | 2020 | 99    | 12,05  |
+| DKI JAKARTA          | 2020 | 99,69 | 9,22   |
+| JAWA BARAT           | 2020 | 98,63 | 16,31  |
+| JAWA TENGAH          | 2020 | 93,62 | 23,25  |
+| DI YOGYAKARTA        | 2020 | 95,09 | 25,08  |
+| JAWA TIMUR           | 2020 | 92,5  | 22,55  |
+| BANTEN               | 2020 | 97,88 | 12,55  |
+| BALI                 | 2020 | 94,8  | 8,23   |
+| NUSA TENGGARA BARAT  | 2020 | 87,6  | 28,2   |
+| NUSA TENGGARA TIMUR  | 2020 | 93,31 | 42,11  |
+| KALIMANTAN BARAT     | 2020 | 93,41 | 14,41  |
+| KALIMANTAN TENGAH    | 2020 | 99,2  | 10,08  |
+| KALIMANTAN SELATAN   | 2020 | 98,45 | 9,21   |
+| KALIMANTAN TIMUR     | 2020 | 98,97 | 12,74  |
+| KALIMANTAN UTARA     | 2020 | 96,66 | 14,21  |
+| SULAWESI UTARA       | 2020 | 99,79 | 15,4   |
+| SULAWESI TENGAH      | 2020 | 98,24 | 25,98  |
+| SULAWESI SELATAN     | 2020 | 92,56 | 17,71  |
+| SULAWESI TENGGARA    | 2020 | 95    | 22,69  |
+| GORONTALO            | 2020 | 98,75 | 30,81  |
+| SULAWESI BARAT       | 2020 | 93,17 | 22,37  |
+| MALUKU               | 2020 | 99,42 | 35,43  |
+| MALUKU UTARA         | 2020 | 98,77 | 13,75  |
+| PAPUA BARAT          | 2020 | 97,52 | 43,07  |
+| PAPUA                | 2020 | 77,9  | 53,44  |
+| ACEH                 | 2021 | 98,24 | 30,86  |
+| SUMATERA UTARA       | 2021 | 99,19 | 17,5   |
+| SUMATERA BARAT       | 2021 | 99,26 | 12,67  |
+| RIAU                 | 2021 | 99,2  | 14,12  |
+| JAMBI                | 2021 | 98,08 | 15,76  |
+| SUMATERA SELATAN     | 2021 | 98,78 | 25,63  |
+| BENGKULU             | 2021 | 97,88 | 29,65  |
+| LAMPUNG              | 2021 | 97,28 | 24,29  |
+| KEP, BANGKA BELITUNG | 2021 | 98,1  | 9,57   |
+| KEP, RIAU            | 2021 | 99,09 | 11,87  |
+| DKI JAKARTA          | 2021 | 99,73 | 9,39   |
+| JAWA BARAT           | 2021 | 98,62 | 16,37  |
+| JAWA TENGAH          | 2021 | 93,79 | 23,04  |
+| DI YOGYAKARTA        | 2021 | 95,22 | 24,71  |
+| JAWA TIMUR           | 2021 | 92,56 | 21,99  |
+| BANTEN               | 2021 | 97,78 | 13,16  |
+| BALI                 | 2021 | 95    | 9,25   |
+| NUSA TENGGARA BARAT  | 2021 | 87,39 | 27,97  |
+| NUSA TENGGARA TIMUR  | 2021 | 93,85 | 41,43  |
+| KALIMANTAN BARAT     | 2021 | 93,41 | 13,99  |
+| KALIMANTAN TENGAH    | 2021 | 99,1  | 10,32  |
+| KALIMANTAN SELATAN   | 2021 | 98,27 | 9,39   |
+| KALIMANTAN TIMUR     | 2021 | 98,9  | 12,81  |
+| KALIMANTAN UTARA     | 2021 | 96,55 | 14,19  |
+| SULAWESI UTARA       | 2021 | 99,8  | 15,13  |
+| SULAWESI TENGAH      | 2021 | 98,28 | 25,18  |
+| SULAWESI SELATAN     | 2021 | 92,49 | 17,31  |
+| SULAWESI TENGGARA    | 2021 | 94,94 | 23,4   |
+| GORONTALO            | 2021 | 98,75 | 31,02  |
+| SULAWESI BARAT       | 2021 | 93,09 | 23,14  |
+| MALUKU               | 2021 | 99,42 | 34,17  |
+| MALUKU UTARA         | 2021 | 98,71 | 13,27  |
+| PAPUA BARAT          | 2021 | 97,91 | 43,66  |
+| PAPUA                | 2021 | 78,89 | 54,24  |
+
+### Metode analisis
+
+Metode yang dipilih adalah regresi univariat atau Ordinary Least Square (OLS) dengan 2 variabel independen. Penelitian ini bermaksud mencari hubungan antara Angka Melek Huruf penduduk 15-24 tahun dan Kemiskinan penduduk. Spesifikasi yang dilakukan adalah:
+
+$$
+y_{t}=\beta_0 + \beta_1 x_t+\mu_t
+$$ di mana $y_t$ adalah Kemiskinan Penduduk dan $x_t$ adalah Angka Melek Huruf.
+
+## Pembahasan
+
+### Pembahasan masalah
+
+Kemiskinan menjadi salah satu faktor yang sangat diperhatikan oleh pemerintah. Untuk itu diperlukan sumber daya manusia yang berkualitas agar tercipta Sumber Daya Manusia (SDM) yang bisa bersaing di masa saat ini dan masa depan nanti. Secara umum Angka Melek Huruf Berhubungan negatif dengan tingkat kemiskinan. Artinya semakin tinggi Angka Melek Huruf penduduk maka semakin rendah tingkat kemiskinan.
+
+Oleh karena itu, penelitian ini menggunakan metode OLS, maka penulis hanya menghubungkan tingkat Angka Melek Huruf penduduk 15-24 tahun dengan Kemiskinan di Indonesia pada tahun 2017-2021.
+
+```{r}
+library(readxl)
+dat<-read_excel('UAS METOPEL.xlsx')
+head(dat)
+```
+
+### Analisis masalah
+
+Hasil regresinya adalah
+
+```{r}
+reg1<-lm(AMH~MISKIN,data=dat)
+summary(reg1)
+```
+
+Dapat dilihat dari tabel di atas bahwa ini ggplot regresi tersebut.
+
+```{r}
+p<- ggplot(data=dat,aes(x=AMH,y=MISKIN)) +
+  geom_point(alpha=0.5, size=1, color='blue') + # setiap nambah command, selalu kasih tanda +
+  labs(title="Angka melek huruf terhadap kemiskinan",
+       x="Angka melek huruf",
+       y="Angka kemiskinan ",
+       caption = "sumber: Badan Pusat Statistika")# yang terakhir ga perlu +
+p + theme(
+  plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5),
+  axis.title.x = element_text(color="black", size=7, face="bold"),
+  axis.title.y = element_text(color="black", size=7, face="bold"), 
+  plot.caption = element_text(color="black", size=5)
+)
+
+```
+
+## Kesimpulan dan Saran
+
+**kesimpulan**
+
+Dari hasil regresi pada penelitian diatas dapat disimpulkan bahwa setiap 1% kenaikan Angka Melek Huruf penduduk 15-24 tahun sejalan dengan 13,59% penurunan Kemiskinan Penduduk Indonesia menurut Provinsi. Dari hasil regresi dapat disimpulkan bahwa Angka Melek Huruf penduduk 15-24 tahun berpengaruh besar terhadap kemiskinan Indonesia. Tingkat Angka Melek Huruf penduduk 15-24 tahun memiliki nilai yang fluktuatif setiap provinsinya, begitu juga dengan kemiskinan memiliki nilai yang fluktuatif setiap provinsinya pada tahun 2017-2021.
+
+**Saran**
+
+Saran terhadap penelitian ini, pemerintah seharusnya lebih memerhatikan Angka Melek Huruf penduduk 15-24 tahun terhadap kemiskinan menurut provinsi Indonesia tahun 2017-2021. Cara yang harus dilakukan pemerintah yaitu lebih memerhatikan pendidikan Indonesia agar meningkatnya Angka Melek Huruf karena pendidikan dan Angka Melek Huruf memiliki keterkaitan.
+
+## Referensi
+
+Badan pusat Statisik. (2017). Angka Melek Huruf Penduduk Umur 15-24 Tahun Menurut Provinsi.
+
+Badan pusat Statisik. (2017). Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah.
+
+Dores, Edi. (2014). Pengaruh Angka Melek Huruf Dan Angka Harapan Hidup Terhadap Jumlah Penduduk Miskin Di Provinsi Sumatera Barat. Journal of Economic and Economic Education Vol.2 No.2 (126 - 133).
+
+Raharja Prathama & Manarung Mandala. (1999). Teori Ekonomi Mikro Suatu Pengantar. Edisi Kedua. Jakarta: Fakultas Ekonomi Universitas Indonesia.
+
+Nugroho, Heru. 1995. Kemiskinan, Ketimpangan dan Kesenjangan. Yogyakarta : Aditya Media.
+
+Nurmala, Yiyin. (2021). Pengaruh Angka Melek Huruf, Angka Harapan Hidup Dan Jumlah Penduduk Terhadap Tingkat Kemiskinan Di Indonesia Pada Tahun 2018-2019. Jurnal Ekonomi dan Syariah.
